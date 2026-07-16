@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore Júnior</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+
+    <header>
+        <h1>TechStore Júnior</h1>
+        <nav>
+            <a href="pagina1.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="#carrinho">Carrinho</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="banner">
+        <div class="texto-banner">
+            <h2>Bem-vindo à TechStore</h2>
+            <p> Os melhores acessórios para informática, celulares e tecnologia. </p>
+            <a href="#produtos">
+                <button>Ver Produtos</button>
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="titulo1">Produtos em alta</h2>
+        <div class="cards">
+
+            <div class="card">
+                <img src="imagens/mousegamer.jpg" alt="Mouse Gamer">
+                <h3>Mouse Gamer</h3>
+                <p class="preco"> R$ 120,00 </p>
+                <button onclick="adicionarProduto('Mouse Gamer',120)">  Adicionar ao Carrinho </button>
+            </div>
+            <div class="card">
+                <img src="imagens/teclado.jpg" alt="Teclado Mecânico">
+                <h3>Teclado Mecânico</h3>
+                <p class="preco"> R$ 220,00 </p>
+                <button onclick="adicionarProduto('Teclado Mecânico',220)"> Adicionar ao Carrinho </button>
+            </div>
+            <div class="card">
+                <img src="imagens/headset.jpg" alt="Headset Gamer">
+                <h3>Headset Gamer</h3>
+                <p class="preco"> R$ 180,00 </p>
+                <button onclick="adicionarProduto('Headset Gamer',180)"> Adicionar ao Carrinho </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="carrinho">
+        <h2>Carrinho</h2>
+        <ul id="listaCarrinho"> </ul>
+        <h3 id="total"> Total: R$ 0,00 </h3>
+        <h3 id="desconto"> Desconto: R$ 0,00 </h3>
+        <h2 id="totalFinal"> Total Final: R$ 0,00 </h2>
+    </section>
+
+    <section id="contato">
+        <h2>Finalizar Pedido</h2>
+        <form onsubmit="return validarFormulario()">
+            <label> Nome</label>
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+            >
+
+            <label> E-mail </label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Digite seu e-mail"
+            >
+
+            <label> Quantidade de Produtos </label>
+            <input
+                type="number"
+                id="quantidade"
+                min="1"
+            >
+            <button type="submit"> Finalizar Compra </button>
+        </form>
+    </section>
+    <footer>
+        <p> © 2026 TechStore Júnior</p>
+        <p> Projeto desenvolvido para fins educacionais. </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
